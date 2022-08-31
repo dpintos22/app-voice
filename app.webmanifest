@@ -1,0 +1,42 @@
+{
+    "name": "App Voice",
+    "short_name": "AppVoice",
+    "start_url": "./",
+    "scope": "./",
+    "display": "standalone",
+    "background_color": "#9b59b6",
+    "theme_color": "#8e44ad",
+    "orientation": "portrait-primary",
+    "description": "App de desarrollada en la practica del curso JS de IN-CO-NE",
+    "icons": [
+        {
+            "src": "img/logos/icono.png",
+            "sizes": "1024x1024",
+            "purpose": "any",
+            "type": "image/png"
+        },
+        {
+            "src": "img/logos/maskable_icono.png",
+            "sizes": "512x512", 
+            "purpose": "maskable",
+            "type": "image/png"
+        }
+       ],
+    "screenshots": [
+        {
+            "src": "img/screenshot1.png",
+            "sizes": "1080x2300",
+            "type": "image/png"
+        },
+        {
+            "src": "img/screenshot2.png",
+            "sizes": "1080x2300",
+            "type": "image/png"
+        },
+        {
+            "src": "img/screenshot3.png",
+            "sizes": "1080x2300",
+            "type": "image/png"
+        }
+    ]
+  }

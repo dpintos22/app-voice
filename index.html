@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es_AR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice APP</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+    <!-- Meta datos para PWA - Progressive Web Apps -->
+    <link rel="manifest" href="app.webmanifest">
+    <script async src="https://cdn.jsdelivr.net/npm/pwacompat" crossorigin="anonymous"></script>
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#8e44ad">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link  rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-light bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="img/logos/logo.png" alt="" width="" height="50" class="d-inline-block align-text-center">
+                <span id="title-app"> Voice APP </span>.
+              </a>
+              <button class="btn btn-bd-primary" type="button" id="btn-install"><i class="fa-brands fa-instalod"></i> Instalar</button>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <div class="container-fluid">
+            <section>
+                <div class="section-app container" id="tts">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="text-center container-img animate__animated animate__flipInX">
+                                <img src="img/logos/chat.svg" class="rounded img-fluid" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-floating">
+                                <textarea class="form-control" name="text-input" id="text-input"></textarea>
+                                <label for="text-input">Ingrese texto</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6">
+                            <button type="button" class="btn btn-danger btn-lg" id="btn-clean">
+                                <i class="fa-solid fa-delete-left"></i>
+                                eliminar 
+                            </button>
+                        </div>
+                        <div class="col-6 text-end">
+                            <button type="button" class="btn btn-primary btn-lg" id="btn-speak">
+                                <i class="fa-solid fa-volume-high"></i> Decir 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-app card-voice" id="card-voice" >
+                    <div class="row">
+                        <div class="col-sm-12 mt-2 px-0">
+                            <h4 class="text-center">Seleccione su mensaje</h4>
+                        </div>
+                        <div class="col col-xs-6 col-sm-6 col-md-3">
+                            <div class="text-center">
+                                <lord-icon
+                                    class="container-pic" 
+                                    data-msj="1"
+                                    src="https://cdn.lordicon.com/gludglpa.json"
+                                    trigger="hover"
+                                    style="width:150px;height:150px">
+                                </lord-icon>
+                                <p class="fs-6">Bombero</p>
+                            </div>
+                        </div>
+                        <div class="col col-xs-6 col-sm-6 col-md-3">
+                            <div class="text-center">
+                                <lord-icon
+                                    class="container-pic" 
+                                    data-msj="2"
+                                    src="https://cdn.lordicon.com/qcargsbo.json"
+                                    trigger="hover"
+                                    style="width:150px;height:150px">
+                                </lord-icon>
+                                <p class="fs-6 align-text-center">Ambulancia</p>
+                            </div>
+                        </div>
+                        <div class="col col-xs-6 col-sm-6 col-md-3">
+                            <div class="text-center">
+                                <lord-icon
+                                    class="container-pic" 
+                                    data-msj="3"
+                                    src="https://cdn.lordicon.com/fplutblu.json"
+                                    trigger="hover"
+                                    style="width:150px;height:150px">
+                                </lord-icon>
+                                <p class="fs-6 text-center">Entradas</p>
+                            </div>
+                        </div>
+                        <div class="col col-xs-6 col-sm-6 col-md-3">
+                            <div class="text-center">
+                                <lord-icon
+                                    class="container-pic" 
+                                    data-msj="4"
+                                    src="https://cdn.lordicon.com/oaflahpk.json"
+                                    trigger="hover"
+                                    style="width:150px;height:150px">
+                                </lord-icon>
+                                <p class="fs-6 text-center">Ubicación</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <nav class="navbar fixed-bottom" id="footer-menu">
+            <div class="container-fluid">
+                <li>
+                    <a href="#" class="link-section" data-link="tts" ><i class="fa-solid fa-comment-dots"></i> TEXTO</a>
+                </li>
+                <li>
+                    <a href="#"class="link-section" data-link="card-voice" ><i class="fa-solid fa-image"></i> IMAGEN</a>
+                </li>
+            </div>
+        </nav>
+    </footer>
+    <div id="custom-loading"></div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+    <script src="https://unpkg.com/siriwave/dist/siriwave.umd.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

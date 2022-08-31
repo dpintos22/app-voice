@@ -1,0 +1,134 @@
+:root{
+    --bd-violet: #A700FF;
+    --bs-white: white;
+  }
+#text-input{
+    height: 8em;
+}
+#title-app{
+    color: white;
+    font-weight: 800;
+}
+.container-img{
+    margin: 1rem;
+}
+.container-img > img{
+    height: 8em;
+}
+#custom-loading{
+    background-color: #341f97;
+    bottom: 0px;
+    display: none;
+    left: 0px;
+    opacity: 0.9;
+    position: fixed;
+    right: 0px;
+    text-align: center;
+    top: 0px;
+    vertical-align: middle;
+    z-index : 10000;
+}
+#custom-loading img{
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+}
+
+/*footer-menu*/
+#footer-menu{
+    background-color: #341f97;
+    color: white;
+    padding: 1rem;
+}
+#footer-menu li{
+    list-style-type: none;
+}
+#footer-menu a{
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+/*Styles for loaders*/
+.loader{
+    width: 100px;
+    height: 75px;
+    margin: 0 auto;
+    background: #fff;
+    position: relative;
+    border-radius: 100%;
+  }
+  .loader:before {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    border: 15px solid transparent;
+    border-top: 25px solid #fff;
+    transform: rotate(45deg);
+    top: 50px;
+    left: -15px;
+  }
+  
+  .loader:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    border-radius: 50%;
+    background-color: #FF3D00;
+    box-shadow: 20px 0 #FF3D00, -20px 0 #FF3D00;
+    animation: flash 0.5s ease-out infinite alternate;
+  }
+  
+  @keyframes flash {
+    0% {
+      background-color: rgba(255, 60, 0, 0.25);
+      box-shadow: 20px 0 rgba(255, 60, 0, 0.25), -20px 0 #FF3D00;
+    }
+    50% {
+      background-color: #FF3D00;
+      box-shadow: 20px 0 rgba(255, 60, 0, 0.25), -20px 0 rgba(255, 60, 0, 0.25);
+    }
+    100% {
+      background-color: rgba(255, 60, 0, 0.25);
+      box-shadow: 20px 0 #FF3D00, -20px 0 rgba(255, 60, 0, 0.25);
+    }
+  }
+
+/*Styles button install*/
+#btn-install{
+    display: none;
+}
+.btn-bd-primary {
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet);
+    --bs-btn-border-color: var(--bd-violet);
+    --bs-btn-border-radius: .5rem;
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #{shade-color($bd-violet, 10%)};
+    --bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
+    --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
+}
+
+#card-voice{
+  display: none;
+}
+#card-voice .col{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.container-pic{
+  cursor: pointer;
+}
+.section-app{
+  height: 100vh;
+}
